@@ -10,6 +10,7 @@
 		C31A457020F2655D00C17A45 /* SVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31A456620F2655D00C17A45 /* SVFoundation.framework */; };
 		C31A457520F2655D00C17A45 /* SVFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A457420F2655D00C17A45 /* SVFoundationTests.swift */; };
 		C31A457720F2655D00C17A45 /* SVFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C31A456920F2655D00C17A45 /* SVFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C31A458120F2665A00C17A45 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A458020F2665A00C17A45 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		C31A456F20F2655D00C17A45 /* SVFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31A457420F2655D00C17A45 /* SVFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVFoundationTests.swift; sourceTree = "<group>"; };
 		C31A457620F2655D00C17A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C31A458020F2665A00C17A45 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				C31A456920F2655D00C17A45 /* SVFoundation.h */,
 				C31A456A20F2655D00C17A45 /* Info.plist */,
+				C31A458020F2665A00C17A45 /* Result.swift */,
 			);
 			path = SVFoundation;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					C31A456520F2655D00C17A45 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					C31A456E20F2655D00C17A45 = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31A458120F2665A00C17A45 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		C31A457B20F2655D00C17A45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -359,6 +365,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +374,7 @@
 		C31A457C20F2655D00C17A45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -393,6 +401,7 @@
 		C31A457E20F2655D00C17A45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6LW85U94N;
 				INFOPLIST_FILE = SVFoundationTests/Info.plist;
@@ -411,6 +420,7 @@
 		C31A457F20F2655D00C17A45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6LW85U94N;
 				INFOPLIST_FILE = SVFoundationTests/Info.plist;
