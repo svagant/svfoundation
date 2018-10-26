@@ -10,7 +10,9 @@
 		C31A457020F2655D00C17A45 /* SVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31A456620F2655D00C17A45 /* SVFoundation.framework */; };
 		C31A457520F2655D00C17A45 /* SVFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A457420F2655D00C17A45 /* SVFoundationTests.swift */; };
 		C31A457720F2655D00C17A45 /* SVFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C31A456920F2655D00C17A45 /* SVFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C31A458120F2665A00C17A45 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A458020F2665A00C17A45 /* Result.swift */; };
+		C3B11D9621833D6D00FDBEA5 /* Asynchronicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B11D9521833D6D00FDBEA5 /* Asynchronicity.swift */; };
+		C3B11D982183502600FDBEA5 /* Failable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B11D972183502600FDBEA5 /* Failable.swift */; };
+		C3B11D9A21835A5800FDBEA5 /* StandardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B11D9921835A5800FDBEA5 /* StandardError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,9 @@
 		C31A456F20F2655D00C17A45 /* SVFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31A457420F2655D00C17A45 /* SVFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVFoundationTests.swift; sourceTree = "<group>"; };
 		C31A457620F2655D00C17A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C31A458020F2665A00C17A45 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C3B11D9521833D6D00FDBEA5 /* Asynchronicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asynchronicity.swift; sourceTree = "<group>"; };
+		C3B11D972183502600FDBEA5 /* Failable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failable.swift; sourceTree = "<group>"; };
+		C3B11D9921835A5800FDBEA5 /* StandardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,9 @@
 			children = (
 				C31A456920F2655D00C17A45 /* SVFoundation.h */,
 				C31A456A20F2655D00C17A45 /* Info.plist */,
-				C31A458020F2665A00C17A45 /* Result.swift */,
+				C3B11D9521833D6D00FDBEA5 /* Asynchronicity.swift */,
+				C3B11D972183502600FDBEA5 /* Failable.swift */,
+				C3B11D9921835A5800FDBEA5 /* StandardError.swift */,
 			);
 			path = SVFoundation;
 			sourceTree = "<group>";
@@ -151,7 +157,7 @@
 				TargetAttributes = {
 					C31A456520F2655D00C17A45 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1010;
 					};
 					C31A456E20F2655D00C17A45 = {
 						CreatedOnToolsVersion = 10.0;
@@ -198,7 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31A458120F2665A00C17A45 /* Result.swift in Sources */,
+				C3B11D9621833D6D00FDBEA5 /* Asynchronicity.swift in Sources */,
+				C3B11D982183502600FDBEA5 /* Failable.swift in Sources */,
+				C3B11D9A21835A5800FDBEA5 /* StandardError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -331,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
