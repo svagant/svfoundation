@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SVFoundation"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "An extension to Foundation."
   s.description  = <<-DESC
   An extension to Foundation.
