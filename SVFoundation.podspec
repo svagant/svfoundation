@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SVFoundation"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "An extension to Foundation."
   s.description  = <<-DESC
   An extension to Foundation.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/svagant/svfoundation.git", :tag => "#{s.version}" }
 
-  s.source_files  = "SVFoundation/**/*.swift"
+  s.source_files  = "SVFoundation/SVFoundation/**/*.swift"
   #s.exclude_files = "Classes/Exclude"
 
 
