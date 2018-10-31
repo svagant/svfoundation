@@ -8,7 +8,7 @@ import Foundation
  
  - Note: Todays favourite dealing with asynchronicity has rather
  functional oriented character (either using promise/future model or even whole
- reactive design pattern). They have their reason but there are cases where
+ reactive programming paradigm). They have their reason but there are cases where
  we want keep solutions simple and not introduce heavy frameworks and patterns.
  This type is an attempt to introduce a simple convention in order to sanitize
  usage of standard closures and completion handlers critical for a continuation
@@ -47,7 +47,7 @@ import Foundation
          asyncReturn(Failable({ try wordOfTheDay() }))
          // or
          do {
-             asyncReturn(.value(try wordOfTheDay()))
+             asyncReturn(.ok(try wordOfTheDay()))
          } catch {
              asyncReturn(.failure(error))
          }
