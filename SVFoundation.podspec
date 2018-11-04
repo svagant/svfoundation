@@ -1,26 +1,12 @@
-Pod::Spec.new do |s|
-
-  s.name         = "SVFoundation"
-  s.version      = "0.1.4"
-  s.summary      = "An extension to Foundation."
-  s.description  = <<-DESC
-  An extension to Foundation...
-  DESC
-  s.homepage     = "https://github.com/svagant/svfoundation"
-  s.license      = "MIT"
-  s.author             = { "Stanislav Smida" => "s@svagant.com" }
-
-  s.ios.deployment_target = "9.0"
-#  s.osx.deployment_target = "10.12"
-#  s.watchos.deployment_target = "3.0"
-#  s.tvos.deployment_target = "9.3"
-
-  s.source       = { :git => "https://github.com/svagant/svfoundation.git", :tag => "#{s.version}" }
-
-  s.source_files  = "SVFoundation/SVFoundation/**/*.swift"
-  s.exclude_files = "SVFoundation/SVFoundationTests"
-
-
-  s.swift_version = "4.2"
-
+Pod::Spec.new do |spec|
+  spec.author = { 'Stanislav Smida' => 's@svagant.com' }
+  spec.homepage = 'https://github.com/svagant/svfoundation'
+  spec.ios.deployment_target = '9.0'
+  spec.license = { :type => 'MIT' }
+  spec.name = 'SVFoundation'
+  spec.source = { :git => 'https://github.com/svagant/svfoundation.git', :tag => '#{ spec.version }' }
+  spec.source_files  = 'SVFoundation/*.swift'
+  spec.summary = 'An extension to Foundation.'
+  spec.version = '0.1.5'
+  spec.swift_version = '4.2'
 end
