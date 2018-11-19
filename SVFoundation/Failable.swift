@@ -28,12 +28,21 @@ public enum Failable<T> {
             self = .failure(error)
         }
     }
+
+    public func optionalValue() -> T? {
+        switch self {
+        case .failure(_):
+            return nil
+        case .ok(let value):
+            return value
+        }
+    }
     
     public func unwrap() throws -> T {
         switch self {
-        case let .failure(error):
+        case .failure(let error):
             throw error
-        case let .ok(value):
+        case .ok(let value):
             return value
         }
     }
@@ -73,11 +82,11 @@ public enum SpecificFailable<T, ErrorType> where ErrorType: Error {
      In case you need to swith to Swift error handling, transform to
      `Failable` from where you can do throwing unwrap.
      */
-    public var failable: Failable<T> {
+    public var failableValue: Failable<T> {
         switch self {
-        case let .failure(error):
+        case .failure(let error):
             return .failure(error)
-        case let .ok(value):
+        case .ok(let value):
             return .ok(value)
         }
     }
