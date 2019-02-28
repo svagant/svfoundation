@@ -9,5 +9,5 @@ Pod::Spec.new do |spec|
   spec.source = { :git => 'https://github.com/svagant/svfoundation.git', :tag => spec.version.to_s }
   spec.source_files  = 'SVFoundation/*.swift'
   spec.summary = 'An extension to Foundation.'
-  spec.swift_versions = '5.0'
+  spec.swift_versions = ['5.0']
 end
