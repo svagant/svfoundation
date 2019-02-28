@@ -11,7 +11,6 @@
 		C31A457520F2655D00C17A45 /* SVFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A457420F2655D00C17A45 /* SVFoundationTests.swift */; };
 		C31A457720F2655D00C17A45 /* SVFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C31A456920F2655D00C17A45 /* SVFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3B11D9621833D6D00FDBEA5 /* Asynchronicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B11D9521833D6D00FDBEA5 /* Asynchronicity.swift */; };
-		C3B11D982183502600FDBEA5 /* Failable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B11D972183502600FDBEA5 /* Failable.swift */; };
 		C3B11D9A21835A5800FDBEA5 /* StandardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B11D9921835A5800FDBEA5 /* StandardError.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		C31A457420F2655D00C17A45 /* SVFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVFoundationTests.swift; sourceTree = "<group>"; };
 		C31A457620F2655D00C17A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3B11D9521833D6D00FDBEA5 /* Asynchronicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asynchronicity.swift; sourceTree = "<group>"; };
-		C3B11D972183502600FDBEA5 /* Failable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failable.swift; sourceTree = "<group>"; };
 		C3B11D9921835A5800FDBEA5 /* StandardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 				C31A456920F2655D00C17A45 /* SVFoundation.h */,
 				C31A456A20F2655D00C17A45 /* Info.plist */,
 				C3B11D9521833D6D00FDBEA5 /* Asynchronicity.swift */,
-				C3B11D972183502600FDBEA5 /* Failable.swift */,
 				C3B11D9921835A5800FDBEA5 /* StandardError.swift */,
 			);
 			path = SVFoundation;
@@ -205,7 +202,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B11D9621833D6D00FDBEA5 /* Asynchronicity.swift in Sources */,
-				C3B11D982183502600FDBEA5 /* Failable.swift in Sources */,
 				C3B11D9A21835A5800FDBEA5 /* StandardError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +370,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -402,7 +398,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

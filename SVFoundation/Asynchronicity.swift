@@ -5,6 +5,8 @@ import Foundation
  calling this function is critically important for continuation of the program
  flow. Calling this function is regarded as returning from a function. Never
  calling this function is regarded as fatal as returning `Never`.
+
+ - Note: [huh](https://developer.apple.com/documentation/swift/preventing_timing_problems_when_using_closures)
  
  - Note: Todays favourite dealing with asynchronicity has rather
  functional oriented character (either using promise/future model or even whole
@@ -34,47 +36,12 @@ import Foundation
  `asyncReturn`.
  * You must call `asyncReturn`. Think of it as of mandatory return from
  a function.
- * If producing a value may fail, use `Failable` or `SpecificFailable` as
- `ReturnType`.
- 
- Here is an example of definig and using such async return function.
- 
- ````
- // Design function that returns awaited result asynchronously with parameter
- // with name `asyncReturn` and type `@escaping AsyncReturn`.
- func fetchWordOfTheDay(asyncReturn: @escaping AsyncReturn<Failable<String>>) {
-     DispatchQueue.global().async(execute: { // Fake async.
-         asyncReturn(Failable({ try wordOfTheDay() }))
-         // or
-         do {
-             asyncReturn(.ok(try wordOfTheDay()))
-         } catch {
-             asyncReturn(.failure(error))
-         }
-         // `asyncReturn` was called before program exits this scope.
-     })
- }
- 
- // just declaration for illustration
- func wordOfTheDay() throws -> String
- 
- 
- func printWordOfTheDay() {
-     fetchWordOfTheDay(asyncReturn: { (wordOfTheDay) in
-         // We feel safe to rely that this completion handler will be executed.
-         do {
-             print(try wordOfTheDay.unwrap())
-         } catch {
-             print(error)
-         }
-     })
- }
- ````
+ * If producing a value may fail, use `Result` as `ReturnType`.
+
  
  - Todo: Check if Swift Lint could help with violation of the rules.
  
  - Requires: Follow the convention!
  
- - SeeAlso: `Failable` and `SpecificFailable`.
  */
 public typealias AsyncReturn<ReturnType> = (ReturnType) -> Void
