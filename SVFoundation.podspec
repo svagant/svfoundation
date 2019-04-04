@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.author = { 'Stanislav Smida' => 's@svagant.com' }
   spec.homepage = 'https://github.com/svagant/svfoundation'
-  spec.ios.deployment_target = '12.2'
+  spec.ios.deployment_target = '10.0'
   spec.license = { :type => 'MIT' }
   spec.name = 'SVFoundation'
   spec.version = '0.2'
